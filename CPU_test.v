@@ -50,28 +50,32 @@ module CPU_test ();
         #100000;
         $finish;
     end
-    CPU_10 CPU_10(
-            .clk(clk), 
-            .rst(rst),
-            .EX_irq(EX_irq)
-            // .NZCV(NZCV),
-            // .PC(PC),
-            // .Write_PC(Write_PC),
-            // .Write_IR(Write_IR),
-            // .Write_Reg(Write_Reg),
-            // .L_A(L_A),
-            // .L_B(L_B),
-            // .L_C(L_C),
-            // .L_F(L_F),
-            // //.rm_imm_s(rm_imm_s),
-            // //.rs_imm_s(rs_imm_s),
-            // .ALU_OP(ALU_OP),
-            // .SHIFT_OP(SHIFT_OP),
-            // .S(S),
-            // .st_cur(st_cur),
-            // .PC_s(PC_s),
-            // .F_s(F_s),
-            // .INT_irq(INT_irq),
-            // .INTA_irq(INTA_irq)
-    );
+    
+
+CPU #(
+	.IDLE 		( 6'd63    		),
+	.S0   		( 6'd0     		),
+	.S1   		( 6'd1     		),
+	.S2   		( 6'd2     		),
+	.S3   		( 6'd3     		),
+	.S7   		( 6'd7     		),
+	.S8   		( 6'd8     		),
+	.S9   		( 6'd9     		),
+	.S10  		( 6'd10    		),
+	.S11  		( 6'd11    		),
+	.S26  		( 6'd26    		),
+	.S27  		( 6'd27    		),
+	.S28  		( 6'd28    		),
+	.S29  		( 6'd29    		),
+	.S30  		( 6'd30    		),
+	.S31  		( 6'd31    		),
+	.M    		( 5'b10000 		),
+	.R14  		( 4'he     		))
+u_CPU(
+	//ports
+	.clk    		( clk    		),
+	.rst    		( rst    		),
+	.EX_irq 		( EX_irq 		)
+);
+
 endmodule

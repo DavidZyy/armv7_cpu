@@ -1,12 +1,9 @@
 //在实现分支跳转指令的基础上修改，实现了中断返回
-module CPU_10(
+module CPU(
     input clk, 
     input rst, 
     input EX_irq
-
-    // output Shift_Out, W_Data, NZCV, PC, Write_PC, Write_IR, Write_Reg, L_A, L_B, L_C, L_F, ALU_OP, SHIFT_OP, 
-    // S, st_cur, PC_s, F_s, INT_irq, INTA_irq
-    );
+);
 
     //to accept the signal of icc
     wire CPSR_7 = 0;

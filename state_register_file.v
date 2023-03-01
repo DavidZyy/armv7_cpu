@@ -1,4 +1,4 @@
-module state_register_file(
+module state_register_file (
     input clk, 
     input W_SPSR_s,
     input [2:0] W_CPSR_s,
@@ -19,7 +19,7 @@ module state_register_file(
     output [31:0] SPSR_mon,
     output [31:0] SPSR_hyp,
     output [31:0] CPSR
-    );
+);
     reg [31:0] Curr_SPSR, CPSR_in;//the SPSR in the current mode,  the CPSR to  
     wire [31:0] new_SPSR;
     reg [6:0] clk_m;
